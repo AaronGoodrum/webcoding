@@ -1,0 +1,13 @@
+{
+    "name": "Public style",
+    "supportEmail": "vladimirdashukevich@geotab.com",
+    "version": "1.0",
+    "items": [{
+            "url": "style.html",
+            "path": "ActivityLink/",
+            "menuName": {
+                "en": "Public style"
+            }
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+	"name": "AddinsDeveloperTool",
+	"version": "0.0.1",
+	"author": "vladimirdashukevich@geotab.com",
+	"description": "Tool for developing Geotab Add-Ins",
+	"devDependencies": {
+		"express": "latest",
+		"bluebird": "latest"
+	},
+	"engines": {
+		"node": ">=4.0.0"
+	}
+}

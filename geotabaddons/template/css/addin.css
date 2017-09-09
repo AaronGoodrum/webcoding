@@ -1,0 +1,5 @@
+#template-container {
+	/* To avoid conflicts, prefix your CSS class names with your Add-In name. In this example: "template-container",
+	template with the the name of your Add-In and container the class name. */
+	padding: 1em;
+}

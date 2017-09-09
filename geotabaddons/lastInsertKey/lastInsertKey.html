@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Last Insert Key Report (by Geotab)</title>
+    <link href="./css/addin.css" rel="stylesheet" />
+    <script src="./js/addin.js"></script>
+    <script src="3rd-party/js-xlsx/jszip.js"></script>
+    <script src="3rd-party/js-xlsx/cpexcel.js"></script>
+    <script src="3rd-party/js-xlsx/ods.js"></script>
+    <script src="3rd-party/js-xlsx/xlsx.js"></script>
+    <script src="3rd-party/FileSaver.js/FileSaver.min.js"></script>
+</head>
+<body>
+<div id="lastInsertKey-container" class="lastInsertKey">
+    <div class="lastInsertKey-toolbar">
+        <button class="lastInsertKey-button" id="lastInsertKey-sortByName">Sort by Name</button>
+        <button class="lastInsertKey-button" id="lastInsertKey-sortByDate">Sort by Date</button>
+        <button class="lastInsertKey-button" id="lastInsertKey-sortByType">Sort by Type</button>
+        <button class="lastInsertKey-button" id="lastInsertKey-exportToXLSX" disabled="disabled">Excel</button>
+    </div>
+    <div class="lastInsertKey-title">
+        <h2>Last Insert Key Report</h2>
+    </div>
+    <div class="lastInsertKey-data">
+        <div class="lastInsertKey-options">
+            <div class="lastInsertKey-header">Options</div>
+            <div class="lastInsertKey-controls">
+                <div class="lastInsertKey-control">
+                    <div class="lastInsertKey-label">From date</div>
+                    <input type="date" id="lastInsertKey-dateFrom" />
+                    <div class="lastInsertKey-fromDate"></div>
+                </div>
+                <div class="lastInsertKey-control">
+                    <div class="lastInsertKey-label">Drivers</div>
+                    <div class="lastInsertKey-drivers"></div>
+                </div>
+                <button id="lastInsertKey-runReport" class="lastInsertKey-button lastInsertKey-submit-button">Run report</button>
+                <div id="lastInsertKey-progress" class="lastInsertKey-progress"></div>
+            </div>
+        </div>
+
+        <div class="lastInsertKey-grid"></div>
+    </div>
+</div>
+</body>
+</html>
