@@ -1,108 +1,86 @@
-var numSquares = 6;
-var colors = generateRandomColors(numSquares);
+var numSquares = 9;
+var colors = [];
+var pickedColor;
 var squares = document.querySelectorAll(".square");
-var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#resetButton");
 var modeButtons = document.querySelectorAll(".mode")
 
-//var easyButton = document.querySelector("#easyButton")
-//var hardButton = document.querySelector("#hardButton")
+init();
 
-for(var i = 0; i < modeButtons.length; i++){
-	modeButtons[i].addEventListener("click", function() {
-		modeButtons[0].classList.remove("selected")	;
-		modeButtons[1].classList.remove("selected")	;
-		this.classList.add("selected");
-		
-		this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
-		reset();
-	});
+function init() {
+	//call function button setup
+	setUpButtons();
+	//add initial colors to squares
+	setUpSquares();
+	reset();
+}
+
+function setUpButtons() {
+	for (var i = 0; i < modeButtons.length; i++) {
+		modeButtons[i].addEventListener("click", function() {
+			modeButtons[0].classList.remove("selected");
+			modeButtons[1].classList.remove("selected");
+			this.classList.add("selected");
+
+			this.textContent === "Easy" ? numSquares = 6 : numSquares = 9;
+			reset();
+		});
+	}
+}
+
+function setUpSquares(){
+	for (var i = 0; i < squares.length; i++) {
+		//add click listeners to squares
+		squares[i].addEventListener("click", function() {
+			//grab color of clicked squares
+			var clickedColor = this.style.backgroundColor;
+			//compare color to pickedColor
+			console.log(clickedColor, pickedColor)
+			if (clickedColor === pickedColor) {
+				messageDisplay.textContent = "Correct!";
+				resetButton.textContent = "Play Again?"
+				changeColors(clickedColor);
+				h1.style.backgroundColor = clickedColor;
+			}
+			else {
+				this.style.backgroundColor = "#232323";
+				messageDisplay.textContent = "Try Again";
+				resetButton.textContent = "Reset Colors?"
+			}
+		});
+	}
+	reset();
 }
 
 function reset() {
+	//pick mode, set colors, reset all colors
 	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
 	colorDisplay.textContent = pickedColor;
-	messageDisplay.textContent = "";
 	resetButton.textContent = "New Colors"
-	//change colos squares
+	messageDisplay.textContent = "";
+
+	//change colors squares
 	for (var i = 0; i < squares.length; i++) {
 		// add initial colors to squares
-		if(colors[i]){
+		if (colors[i]) {
 			squares[i].style.backgroundColor = colors[i];
 			squares[i].style.display = "block";
-		} else {
-		squares[i].style.display = "none";
-	}
+		}
+		else {
+			squares[i].style.display = "none";
+		}
 	}
 	h1.style.backgroundColor = "steelblue";
 };
 
-// // easy Button set 3 squares
-// easyButton.addEventListener("click", function() {
-// 	easyButton.classList.add("selected");
-// 	hardButton.classList.remove("selected");
-// 	numSquares = 3;
-// 		resetButton(numSquares);
-// });
-
-// // easy Button set 6 squares
-// hardButton.addEventListener("click", function() {
-// 	easyButton.classList.remove("selected");
-// 	hardButton.classList.add("selected");
-// 	numSquares = 6;
-// 		resetButton(numSquares);
-// });
-
 resetButton.addEventListener("click", function() {
 	reset();
-	// //Picking new colors from button
-	// colors = generateRandomColors(numSquares);
-	// pickedColor = pickColor();
-	// colorDisplay.textContent = pickedColor;
-	// messageDisplay.textContent = "";
-	// resetButton.textContent = "New Colors"
-	// //change colos squares
-	// for (var i = 0; i < squares.length; i++) {
-	// 	// add initial colors to squares
-	// 	if(colors[i]){
-	// 		squares[i].style.backgroundColor = colors[i];
-	// 		squares[i].style.display = "block";
-	// 	} else {
-	// 	squares[i].style.display = "none";
-	// }
-	// }
-	// h1.style.backgroundColor = "steelblue";
 });
 
-colorDisplay.textContent = pickedColor;
-
-//add initial colors to squares
-for (var i = 0; i < squares.length; i++) {
-	squares[i].style.backgroundColor = colors[i];
-
-	//add click listeners to squares
-	squares[i].addEventListener("click", function() {
-		//grab color of clicked squares
-		var clickedColor = this.style.backgroundColor;
-		//compare color to pickedColor
-		console.log(clickedColor, pickedColor)
-		if (clickedColor === pickedColor) {
-			messageDisplay.textContent = "Correct!";
-			resetButton.textContent = "Play Again?"
-			changeColors(clickedColor);
-			h1.style.backgroundColor = clickedColor;
-		}
-		else {
-			this.style.backgroundColor = "#232323";
-			messageDisplay.textContent = "Try Again";
-			resetButton.textContent = "Reset Colors?"
-		}
-	});
-}
 
 function changeColors(color) {
 	//loop through all squares
