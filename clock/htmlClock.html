@@ -3,30 +3,27 @@
 
 <head>
   <title> Html Clock</title>
-  <meta name="viewport" content="width=device-width, initial scale=1.0,
+   <meta name="viewport" content="width=device-width, initial scale=1.0,
    maximun-scale=1.0, user-scalable=no, minimal-ui">
 </head>
 
 <body>
 
-  <canvas id="clock" width="500" height="500">
-  upgrade
-</canvas>
+  <canvas id="clock" width="500" height="500"></canvas>
 
-<script>
+  <script>
+    var canvas = document.getElementById("clock");
+    var context = canvas.getContext("2d")
+    var clockRadius = canvas.height / 2;
 
-var canvas = document.getElementById("clock");
-var context = canvas.getContext("2d")
-var clockRadius = canvas.width/2;
-
-context.beginPath();
-  context.arc(clockRadius, clockRadius, clockRadius, 0, 2+Math.PI);
-  context.fill();
-
-</script>
+    context.beginPath();
+    context.arc(clockRadius, clockRadius, clockRadius, 0, 2*Math.PI);
+    context.fill();
+  </script>
 
 
 
 
 </body>
+
 </html>
