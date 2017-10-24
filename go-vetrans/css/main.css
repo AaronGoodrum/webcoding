@@ -1,0 +1,41 @@
+body{
+  margin: 30px;
+}
+
+
+
+#carousel-item{
+  margin-top: 15px;
+}
+#red{
+  font-weight: bold;
+  color: #990000;
+}
+
+#blue {
+  font-weight: bold;
+  color: #00007f;
+}
+
+#vetlogo{
+  min-width: 100px;
+  min-height: 50px;
+  max-height: 50px;
+  max-width: 100px;
+}
+
+
+.figure-caption {
+  font-size: 1.5em;
+}
+
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
