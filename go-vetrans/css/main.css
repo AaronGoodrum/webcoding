@@ -2,8 +2,6 @@ body{
   margin: 30px;
 }
 
-
-
 #carousel-item{
   margin-top: 15px;
 }
@@ -32,10 +30,21 @@ body{
 .carousel{
     background: #2f4357;
     margin-top: 20px;
+    -webkit-transition: opacity 2000ms ease-in-out;
+       -moz-transition: opacity 2000ms ease-in-out;
+         -o-transition: opacity 2000ms ease-in-out;
+            transition: opacity 2000ms ease-in-out;
 }
 .carousel .item{
     min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
 }
 .carousel .item img{
     margin: 0 auto; /* Align slide image horizontally center */
+}
+
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
 }
