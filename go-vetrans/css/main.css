@@ -16,11 +16,10 @@ body{
   color: #00007f;
 }
 
-#vetlogo{
-  min-width: 100px;
-  min-height: 50px;
-  max-height: 50px;
-  max-width: 100px;
+.jumbotron {
+  background: transparent;
+	background-image: url('img/seattleSkyline.png') no-repeat center;
+	background-size: cover;
 }
 
 
