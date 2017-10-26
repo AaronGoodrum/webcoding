@@ -1,5 +1,5 @@
 body{
-  margin: 30px;
+  margin: 10px;
 }
 
 
@@ -16,8 +16,9 @@ body{
   color: #00007f;
 }
 
-.jumbotron {
-	background-image: url('img/seattleSkyline.png');
+.jumbotron-bg {
+  background: url('../img/seattleSkyline.png');
+  background-position: 25% -25%;
   background-size: cover;
   background-repeat:no-repeat;
 }
@@ -43,4 +44,5 @@ body{
     .container{
         max-width: 970px;
     }
+
 }
