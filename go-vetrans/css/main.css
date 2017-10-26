@@ -17,9 +17,9 @@ body{
 }
 
 .jumbotron {
-  background: transparent;
-	background-image: url('img/seattleSkyline.png') no-repeat center;
-	background-size: cover;
+	background-image: url('img/seattleSkyline.png');
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 
 
