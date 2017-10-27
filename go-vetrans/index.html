@@ -6,7 +6,7 @@
   <title>Vetrans</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -21,22 +21,32 @@
 
   <!-- NavBar -->
   <nav id="home" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <a class="navbar-brand" href="#"><img width="100" height="50"  src="img/vetransLogo.svg" alt="vetLogo" ></a>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="index.html"> Home <span class="sr-only">(current)</span></a>
+    <div class="container" role="navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <a class="nav-item nav-link" href="#services">Services</a>
-          <a class="nav-item nav-link" href="#about">About <span id="red">VET</span><span id="blue">RANS</span> </a>
-          <a class="nav-item nav-link" href="#employment">Employment</a>
-          <a class="nav-item nav-link" href="#contact">Contact</a>
+    <a class="navbar-brand" href="#"><img width="100" height="50"  src="img/vetransLogo.svg" alt="vetLogo" ></a>
 
-        </div>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About <span id="red">VET</span><span id="blue">RANS</span> </a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#employment">Employment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -159,10 +169,18 @@
     <!-- about-->
 
     <h1 id="about" class="display-4 text-center my-5 text-muted">About Vetrans </h1>
+        <div class="container">
+          <img src="img/vetrans-truck01.png" class="rounded img-fluid" alt="Responsive image">
+          <p>
+            VETRANS LLC is a full service truckload brokerage with customers and carriers across the US.
+We have been in business since 2006. We are EDI-capable and work in the propriety systems of many of our shippers. VETRANS LLC will find reliable trucks for your loads. We work when you work.
+We pay our carrier partners quickly and fairly.
 
+VETRANS Logistics Services, Inc is a flatbed trucking company operating in the Western US since 2011. We have semi and maxi equipment. Our drivers are honorably-discharged veterans.
+          </p>
 
-
-    <!-- about-->
+        </div>
+        <!-- about-->
 
     <!-- employment-->
 
@@ -175,6 +193,34 @@
     <!-- contact-->
 
     <h1 id="contact" class="display-4 text-center my-5 text-muted">Contact </h1>
+      <table class="table">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">Operations & Support</th>
+      <th scope="col">Name:</th>
+      <th scope="col">E-mail:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="img/team/dom-145.jpg" class="rounded img-fluid" alt="Responsive image"></td>
+      <td>Dominic Santiago</td>
+      <td><a href="email:dom@go-vetrans.com" class="badge badge-primary">Dom@go-vetrans</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+  </table>
 
 
 

@@ -13,3 +13,10 @@ function carousel() {
     setTimeout(carousel, 7000); // Change image every 3 seconds
 
 }
+
+
+$(document).on('click','.navbar-collapse.show',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});
