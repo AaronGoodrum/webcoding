@@ -17,20 +17,23 @@ body{
 }
 
 .jumbotron-bg {
-  background: url('../img/seattleSkyline.png');
-  background-position: 25% -25%;
-  background-size: cover;
+  background-image: linear-gradient(to bottom, #005299, #e6f3ff), url('../img/seattleSkyline.png');
+  background-image: linear-gradient(to bottom, rgba(16, 153, 255, 0.7), rgba(255, 252, 179, 0.7)), url('../img/seattleSkyline.png');
+  background-image: -moz-linear-gradient(top, rgba(16, 153, 255, 0.7), rgba(255, 252, 179, 0.7)), url('../img/seattleSkyline.png');
+  background-image: -o-linear-gradient(top, rgba(16, 153, 255, 0.7), rgba(255, 252, 179, 0.7)), url('../img/seattleSkyline.png');
+  background-image: -webkit-linear-gradient(top, rgba(16, 153, 255, 0.7), rgba(255, 252, 179, 0.7)), url('../img/seattleSkyline.png');
   background-repeat:no-repeat;
-}
+  background-size: cover;
+  max-width: 100%;
+  font-size:3em;
+  padding:1em;
+  line-height:1;
 
-
-.figure-caption {
-  font-size: 1.5em;
 }
 
 .carousel{
     background: #2f4357;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .carousel .item{
     min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
@@ -40,9 +43,22 @@ body{
 }
 
 
-@media (min-width: 1200px) {
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
     .container{
         max-width: 970px;
     }
 
+    .jumbotron-bg {
+      background-position: top left;
+  }
+
 }
+/* Small devices (landscape phones, 480px and up) */
+@media (min-width: 280px) {
+
+  .jumbotron-bg {
+    background-position: top left;
+}
+
+ }
