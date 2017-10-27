@@ -29,6 +29,7 @@ body{
   padding:1em;
   line-height:1;
 
+
 }
 
 .carousel{
@@ -44,21 +45,23 @@ body{
 
 
 /*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media (min-width: 580px) {
     .container{
         max-width: 970px;
     }
 
     .jumbotron-bg {
       background-position: top left;
+      background-size: cover;
   }
 
 }
 /* Small devices (landscape phones, 480px and up) */
-@media (min-width: 280px) {
+@media (max-width: 380px) {
 
   .jumbotron-bg {
     background-position: top left;
+    background-size: auto;
 }
 
  }
