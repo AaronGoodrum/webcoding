@@ -1,11 +1,4 @@
-body{
-  margin: 10px;
-}
 
-
-#carousel-item{
-  margin-top: 15px;
-}
 #red{
   font-weight: bold;
   color: #990000;
@@ -14,6 +7,10 @@ body{
 #blue {
   font-weight: bold;
   color: #00007f;
+}
+
+#about{
+  background-color: #e6f3ff;
 }
 
 .jumbotron-bg {
@@ -33,35 +30,48 @@ body{
 }
 
 .carousel{
-    background: #2f4357;
+    background: white;
     margin-top: 10px;
 }
-.carousel .item{
+.carousel-item{
     min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+    max-height: 580px;
 }
-.carousel .item img{
+.carousel img{
     margin: 0 auto; /* Align slide image horizontally center */
+    max-height: 290px;
+
 }
 
+.carousel p{
+    margin: 10 auto; /* Align center */
+    height: 180px;
+    max-height: 180px;
+}
 
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 580px) {
-    .container{
-        max-width: 970px;
+.carousel-fade: {
+    .carousel-inner {
+        .carousel-item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
     }
-
-    .jumbotron-bg {
-      background-position: top left;
-      background-size: cover;
-  }
-
-}
-/* Small devices (landscape phones, 480px and up) */
-@media (max-width: 380px) {
-
-  .jumbotron-bg {
-    background-position: top left;
-    background-size: auto;
-}
-
- }
