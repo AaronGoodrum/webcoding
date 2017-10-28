@@ -2,9 +2,8 @@ body{
   margin: 10px;
 }
 
-
-#carousel-item{
-  margin-top: 15px;
+.carousel-item p{
+  height: 170px;
 }
 #red{
   font-weight: bold;
@@ -39,9 +38,36 @@ body{
 .carousel .item{
     min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
 }
-.carousel .item img{
+.carousel img{
     margin: 0 auto; /* Align slide image horizontally center */
 }
+
+.carousel-fade: {
+    .carousel-inner {
+        .carousel-item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
 
 
 /*Large devices (desktops, 992px and up)*/
