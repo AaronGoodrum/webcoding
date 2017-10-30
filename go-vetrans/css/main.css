@@ -30,6 +30,7 @@
 }
 
 .carousel{
+    margin: 0 auto;
     background: #e6f2ff;
     margin-top: 10px;
 }
