@@ -1,17 +1,18 @@
-$(document).ready(function () {
-$("input#submit").click(function(){
-$.ajax({
-   type: "POST",
-   url: "process.php", //process to mail
-   data: $('form.contact').serialize(),
-   success: function(msg){
-       $("#thanks").html(msg) //hide button and show thank you
-       $("#form-content").modal('hide'); //hide popup
-       $(".alert").alert(.fade)
-   },
-   error: function(){
-       alert("failure");
-   }
-});
-});
-});
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("carousel-item");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 3 seconds
+
+}
+
+
+document.getElementsByClassName(".collapse");
