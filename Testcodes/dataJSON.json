@@ -1,0 +1,32 @@
+[
+  {
+    "name":"Aaron",
+    "age":"30",
+    "map":"seattle"
+  },
+  {
+    "name":"Bob",
+    "age":"18",
+    "map":"Kent"
+  },
+  {
+    "name":"Mike",
+    "age":"45",
+    "map":"Tacoma"
+  },
+  {
+    "name":"Ten",
+    "age":"21",
+    "map":"Gramhan"
+  },
+  {
+    "name":"Leslie",
+    "age":"31",
+    "map":"Puyallup"
+  },
+  {
+    "name":"Candis",
+    "age":"34",
+    "map":"Sumner"
+  }
+]

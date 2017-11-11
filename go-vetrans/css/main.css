@@ -29,50 +29,10 @@
 
 }
 
-.carousel{
-    margin: 0 auto;
-    background: #e6f2ff;
-    margin-top: 10px;
-}
-.carousel-item{
-    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-    max-height: 580px;
-}
-.carousel img{
-    margin: 0 auto; /* Align slide image horizontally center */
-    max-height: 290px;
+
+.header_carousel {
+  margin: 0 auto;
+  max-height: 566px;
+  max-width: 966px;
 
 }
-
-.carousel p{
-    margin: 10 auto; /* Align center */
-    height: 180px;
-    max-height: 180px;
-}
-
-.carousel-fade: {
-    .carousel-inner {
-        .carousel-item {
-            transition-property: opacity;
-        }
-
-        .item,
-        .active.left,
-        .active.right {
-            opacity: 0;
-        }
-
-        .active,
-        .next.left,
-        .prev.right {
-            opacity: 1;
-        }
-
-        .next,
-        .prev,
-        .active.left,
-        .active.right {
-            left: 0;
-            transform: translate3d(0, 0, 0);
-        }
-    }
