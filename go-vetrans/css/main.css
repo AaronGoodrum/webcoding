@@ -29,6 +29,12 @@
 
 }
 
+.slick-track{
+  margin: 0 auto;
+  max-height: 566px;
+  max-width: 966px;
+}
+
 
 .header_carousel {
   margin: 0 auto;

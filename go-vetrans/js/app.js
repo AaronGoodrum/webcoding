@@ -1,28 +1,12 @@
 $(document).ready();
 
-  $('.header_carousel').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear'
+
+
+$('.header_carousel').slick({
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  dots: true,
+  speed: 500,
+  fade: true,
   });
-
-var slideIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("carousel-item");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 5000); // Change image every 3 seconds
-
-}
-
-
-document.getElementsByClassName(".collapse");
