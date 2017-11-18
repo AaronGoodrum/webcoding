@@ -1972,10 +1972,10 @@ ul.filter-select button:after {
 }
 #photos .image {
   display: block;
-  min-height: 240px;
+  min-height: 140px;
   background: #edeff0;
   text-align: center;
-  height: 260px;
+  height: 160px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -1992,7 +1992,7 @@ ul.filter-select button:after {
 #photos .image:before {
   content: "";
   display: inline-block;
-  height: 100%;
+  height: 50%;
   vertical-align: middle;
 }
 #photos img {

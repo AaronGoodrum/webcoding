@@ -1,10 +1,19 @@
 body {
   padding-top: 5em;
+  height:100%;
+width:100%;
 }
 
-.page-main{
-
+footer {
+  margin:10px;
+  background-color: #EE6352;
 }
+
+.badges{
+  height: 3em;
+  padding: 5px 5px;
+}
+
 
 .page-work{
 background-color: rgb(61, 192, 177);
@@ -14,15 +23,26 @@ padding-bottom: 20px;
 
 .triangle-down {
   float: left;
+  margin-right:5%;
   width: 0;
   height: 0;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-top: 80px solid rgb(61, 192, 177);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 40px solid yellow;
   z-index: -1;
 }
 
 .page-about {
+padding-bottom: 2em;
+}
+
+.techBadges{
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #ECECEC;
+  width: 480px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -39,8 +59,63 @@ padding-bottom: 20px;
     max-height: 400px;
   }
 
-  .page-main-content{
-
+  .triangle-down {
+    float: right;
+    right:50%;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid red;
+    z-index: -1;
   }
 
+  .badges{
+
+    padding: 0 2em;
+  }
+}
+
+
+/*Photo css*/
+
+#photos li {
+  margin: 30px 0 0;
+  vertical-align: middle;
+}
+#photos li:before {
+  display: none;
+}
+#photos .image {
+  display: block;
+  min-height: 140px;
+  background: #edeff0;
+  text-align: center;
+  height: 160px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#photos .image:hover {
+  background: #dfe3e4;
+}
+#photos .image:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+#photos img {
+  max-width: 80%;
+  max-height: 200px;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
 }
