@@ -54,6 +54,7 @@ $(document).ready(function() {
         format: "json"
       };
 
+    
       //Build the HTML from all the data from JSON
         function displayPhotos(data) {
           var photoHTML = '<ul>';
