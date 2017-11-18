@@ -1,0 +1,46 @@
+body {
+  padding-top: 5em;
+}
+
+.page-main{
+
+}
+
+.page-work{
+background-color: rgb(61, 192, 177);
+padding-top: 10px;
+padding-bottom: 20px;
+}
+
+.triangle-down {
+  float: left;
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 80px solid rgb(61, 192, 177);
+  z-index: -1;
+}
+
+.page-about {
+
+}
+
+#ABOUT{
+  padding-top: 1em;
+  background-color: rgb(44, 150, 232);;
+}
+
+
+@media only screen and (min-width: 540px){
+/*For Non Mobile*/
+  #headProfile{
+    max-width: 300px;
+    max-height: 400px;
+  }
+
+  .page-main-content{
+
+  }
+
+}
